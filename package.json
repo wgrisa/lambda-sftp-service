@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git@github.com:wgrisa/lambda-sftp-service.git"
   },
+  "scripts": {
+    "start-local-sftp": "docker run --name localsftpserver -p 22:22 -d atmoz/sftp testuser:testpass:::upload",
+    "dsa": "docker stop $(docker ps -q) || true && docker rm $(docker ps -aq) || true"
+  },
   "license": "MIT",
   "dependencies": {
     "ssh2": "^0.6.1"

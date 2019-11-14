@@ -20,20 +20,18 @@ The file name is generated as:
 
 ## Testing the function locally
 
-In order to test the function locally follow these steps:
-
 1.  Start a local FTP server
-    - `docker run --name localsftpserver -p 22:22 -d atmoz/sftp testuser:testpass:::upload`
+    - `npm run start-local-sftp`
 2.  Execute the function
     - `sls invoke local -f uploadFtp -d "HELLO SFTP WORLD"`
 
-## Checking uploaded files
-
-Execute the following commands:
+### Checking uploaded files
 
 1.  `docker exec -ti localsftpserver /bin/bash`
 1.  `cd home/testuser/upload/`
 
 ## Deploy
+
+Warning: Check your local serverless configuration before deploying.
 
 `sls deploy`
