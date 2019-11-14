@@ -1,6 +1,6 @@
 'use strict'
 
-var Client = require('ssh2').Client
+var SshClient = require('ssh2').Client
 
 module.exports.uploadFtp = (event, context, callback) => {
   const host = process.env.FTP_HOST || 'localhost'
@@ -13,7 +13,7 @@ module.exports.uploadFtp = (event, context, callback) => {
   const fullFilePath = `${path}/${fileName}.${extension}`
   const fileContent = event.Records ? event.Records[0].Sns.Message : event
 
-  var conn = new Client()
+  var conn = new SshClient()
 
   conn
     .on('ready', function() {
