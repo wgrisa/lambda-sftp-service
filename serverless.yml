@@ -2,10 +2,9 @@ service: sftp-service
 
 provider:
   name: aws
-  runtime: nodejs10
-  stage: dev
+  runtime: nodejs10.x
+  stage: qa
   region: us-east-1
-  role: arn:aws:iam::649633963864:role/service-role/ftp-lambda-ip-role
 
 functions:
   uploadFtp:
