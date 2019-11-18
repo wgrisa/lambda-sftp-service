@@ -36,6 +36,6 @@ Warning: Check your local serverless configuration before deploying.
 
 `sls deploy`
 
-## Free public SFTP servers
+## Free public SFTP server
 
-https://www.sftp.net/public-online-sftp-servers
+https://www.wftpserver.com/onlinedemo.htm
