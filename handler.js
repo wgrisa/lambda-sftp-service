@@ -11,7 +11,12 @@ module.exports.uploadFtp = (event, context, callback) => {
   const fileName = Math.round(new Date().getTime() / 1000)
   const extension = process.env.FILE_EXTENSION || 'txt'
   const fullFilePath = `${path}/${fileName}.${extension}`
-  const fileContent = event.Records ? event.Records[0].Sns.Message : event
+
+  console.log('Uploading event', event)
+
+  const fileContent = event.Records ? event.Records[0].body : event
+
+  console.log('File content', fileContent)
 
   var conn = new SshClient()
 
