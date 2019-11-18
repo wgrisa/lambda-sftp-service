@@ -35,3 +35,7 @@ The file name is generated as:
 Warning: Check your local serverless configuration before deploying.
 
 `sls deploy`
+
+## Free public SFTP servers
+
+https://www.sftp.net/public-online-sftp-servers
